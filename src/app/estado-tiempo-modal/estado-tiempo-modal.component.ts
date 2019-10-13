@@ -46,8 +46,6 @@ export class EstadoTiempoModalComponent implements OnInit {
     });
   }
 
-
-
   onChange(value: any) {
     this.weatherService.getEstadoTiempo(this.stringLocation, value).subscribe(estadoTiempo => {
       this.estadoTiempo = estadoTiempo;

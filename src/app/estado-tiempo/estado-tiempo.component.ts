@@ -19,16 +19,10 @@ export class EstadoTiempoComponent implements OnInit {
   @Output() public remove: EventEmitter<any> = new EventEmitter<any>();
   bsModalRef: BsModalRef;
 
-  orders = [];
-
   constructor(private modalService: BsModalService) {
   }
 
   ngOnInit() {
-    this.orders = [{id: '1', name: 'order 1'},
-      {id: '2', name: 'order 2'},
-      {id: '3', name: 'order 3'},
-      {id: '4', name: 'order 4'}];
   }
 
   borrar() {
@@ -41,6 +35,7 @@ export class EstadoTiempoComponent implements OnInit {
       backdrop: 'static',
       initialState: {
         stringLocation: this.estadoTiempo.stringLocation,
+        estadoTiempo: this.estadoTiempo,
         callbacks: {
           // aceptar: (param) => this.crearBoard(param),
         }
