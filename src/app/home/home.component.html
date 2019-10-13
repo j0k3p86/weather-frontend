@@ -1,0 +1,29 @@
+﻿<div class="card mt-4">
+  <div class="card-body">
+
+    <button type="button" class="btn btn-success" style="margin-left: 35px" (click)="crearBoardModal()">
+      <i class="fas fa-check"></i> Agregar board
+    </button>
+
+    <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+    <ul *ngIf="boards">
+      <div class="row">
+        <div *ngFor="let board of boards">
+          <div class="card text-white bg-dark mb-3"
+               style="max-width: 18rem;padding: 10px; margin: 10px; min-height: 200px; min-width: 300px">
+            <div class="card-title h3"> {{board.nombreBoard}}
+              <button class="btn btn-danger btn-sm"(click)="removeBoard(board.nombreBoard)">
+                <i class="fas fa-save"></i> Borrar
+              </button>
+            </div>
+            <div class="card-body" (click)="goToBoard(board.nombreBoard)">
+              <div *ngFor="let location of board.locationList">
+                <ul> {{location}} </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div *ngIf="estadoTiempo" class="card text-white bg-dark mb-3"
+     style="max-width: 18rem;padding: 10px; margin: 10px; min-height: 680px; min-width: 340px">
+  <div class="card-title h5"> {{estadoTiempo.stringLocation}}
+    <button class="btn btn-danger btn-sm" (click)="borrar()">
+      <i class="fas fa-save"></i> Borrar
+    </button>
+  </div>
+  <div class="card-body">
+    woeid: {{estadoTiempo.woeid}}
+    <br> city: {{estadoTiempo.city}}
+    <br> region: {{estadoTiempo.region}}
+    <br> country: {{estadoTiempo.country}}
+    <br> latitude: {{estadoTiempo.latitude}}
+    <br> longitude: {{estadoTiempo.longitude}}
+    <br> timezone_id: {{estadoTiempo.timezone_id}}
+    <br> chill: {{estadoTiempo.chill}}
+    <br> direction: {{estadoTiempo.direction}}
+    <br> speed: {{estadoTiempo.speed}}
+    <br> humidity: {{estadoTiempo.humidity}}
+    <br> visibility: {{estadoTiempo.visibility}}
+    <br> pressure: {{estadoTiempo.pressure}}
+    <br> rising: {{estadoTiempo.rising}}
+    <br> sunrise: {{estadoTiempo.sunrise}}
+    <br> sunset: {{estadoTiempo.sunset}}
+    <br> text: {{estadoTiempo.text}}
+    <br> code:  {{estadoTiempo.code}}
+    <br> temperature: {{estadoTiempo.temperature}}
+    <br> pubDate: {{estadoTiempo.pubDate}}
+    <br>
+
+    <button class="btn btn-info btn-sm" (click)="goToModal()">
+      <i class="fas fa-save"></i> Ver otras fechas
+    </button>
+
+
+
+
+  </div>
+</div>
+

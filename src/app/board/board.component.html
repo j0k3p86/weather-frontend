@@ -1,0 +1,17 @@
+<div class="row">
+  <button class="btn btn-success" style="margin-left: 45px" (click)="crearBoardModal()">
+    <i class="fas fa-save"></i> Agregar ubicacion
+  </button>
+</div>
+
+
+<div *ngIf="boardDto">
+  <div class="row" style="margin-left: 20px">
+    <div *ngFor="let estadoTiempo of boardDto.estadoTiempoList; let i = index;">
+      <app-estado-tiempo
+        (remove)="removeChild(i)"
+        [estadoTiempo]="estadoTiempo"></app-estado-tiempo>
+    </div>
+  </div>
+</div>
+

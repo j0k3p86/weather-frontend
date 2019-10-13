@@ -1,0 +1,29 @@
+<div class="modal-header">
+  <h4 class="modal-title float-sm-left">Nuevo {{nuevoString}}</h4>
+</div>
+<form [formGroup]="form">
+  <br>
+  <div class="form-group" style="margin-left: 30px">
+    <div class="row">
+      <div class="col-sm-4">
+        <label>Nombre:</label>
+      </div>
+      <div class="col-sm-5">
+        <input type="text" class="form-control form-control-sm" formControlName="nombre">
+      </div>
+    </div>
+  </div>
+</form>
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-success" (click)="onAceptar()">
+    <i class="fas fa-check"></i> Aceptar
+  </button>
+  <button type="button" class="btn btn-light" (click)="onCancelar()">
+    <i class="fas fa-ban"></i> Cancelar
+  </button>
+</div>
+
+
+
+
